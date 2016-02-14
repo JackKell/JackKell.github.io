@@ -18,37 +18,15 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
 		<script type="text/javascript" src="js/source.js"></script>
+		<script type="text/javascript" src="js/util.js"></script>
+
+		<link rel="import" href="navbar.html">
 	</head>
 
-	<body>
-		<div class="navbar-fixed">
-			<nav class="grey darken-1 z-depth-2">
-				<div class="nav-wrapper">
-					<a href="#" class="brand-logo">
-						<img src="images/Olson_Logo.png" id="navbar_logo">
-					</a>
-					<a href="#" data-activates="mobile-demo" class="button-collapse">
-						<i class="mdi-navigation-menu"></i>
-					</a>
-
-					<ul class="right hide-on-med-and-down">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="resume.html">Resume</a></li>
-						<li><a href="project.html">Projects</a></li>
-						<li><a href="contact.html">Contact Me</a></li>
-					</ul>
-
-					<ul class="side-nav" id="mobile-demo">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="resume.html">Resume</a></li>
-						<li><a href="project.html">Projects</a></li>
-						<li><a href="contact.html">Contact Me</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
+	<body id="body">
+		<script  id="navbar-script">
+			load("navbar-script", "navbar.html")
+		</script>
 
         <div class="intro grey lighten-2 z-depth-3">
             <h1 class="center light-blue-text lighten-3">Brandon Olson</h1>
