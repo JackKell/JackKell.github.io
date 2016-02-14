@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="css/materialize.min.css"/>
 		<link rel="stylesheet" href="css/styles.css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 		<!-- Include the javascript files -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -52,21 +53,58 @@
 
         <div class="intro grey lighten-2 z-depth-3">
             <h1 class="center light-blue-text lighten-3">Contact Me</h1>
-            <h5 class="center light-blue-text lighten-3">Sned Me A Message</h5>
+            <h5 class="center light-blue-text lighten-3">Send Me A Message</h5>
         </div>
 
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l5">
+                    <div class="card white">
+                        <div class="card-content black-text">
+                            <span class="card-title">My Information</span>
+                            <p><i class="material-icons">account_circle</i> Brandon Lee Olson</p>
+                            <p><i class="material-icons">phone</i> 1+(907)-414-4455</p>
+                            <p><i class="material-icons">location_on</i> 2627 W Baseline Rd</p>
+                            <p><i class="material-icons">mail_outline</i>2627 W Baseline Rd Bx 120</p>
+                            <p><i class="material-icons">email</i>Olson.L.Brandon@gmail.com
+                        </div>
+
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="col s12 m12 l7">
+			      	<div class="row">
+			      		<h5>Send A Message</h5>
+			        	<div class="input-field col s6">
+				          	<i class="material-icons prefix">account_circle</i>
+				          	<input id="firstNameBox" type="text" class="validate" required>
+				          	<label for="firstNameBox">First Name</label>
+			        	</div>
+			        	<div class="input-field col s6">
+			        		<input id="lastNameBox" type="text" class="validate" required>
+			          		<label for="lastNameBox">Last Name</label>
+			        	</div>
+			        	<div class="input-field col s12">
+			        		<i class="material-icons prefix">email</i>
+			          		<input id="emailBox" type="email" class="validate" required>
+			          		<label for="emailBox">Email</label>
+			        	</div>
+			        	<div class="input-field col s12">
+			        		<i class="material-icons prefix">description</i>
+			        		<textarea id="messageArea" class="materialize-textarea" required></textarea>
+			        		<label for="messageArea">Your Message</label>
+			        	</div>
+			        	<button class="btn waves-effect waves-light" type="submit" name="action">
+			        		Send Message
+			        		<i class="material-icons right">send</i>
+			        	</button>
+			      	</div>
+			    </form>
+            </div>
+        </div>
     </body>
-
-	<!-- 
-	Content 
-		Home
-			Recent activity
-			Page of skills
-			Grab resume
-			Finish Project
-			Check me out on these locations
-		SIP
-
-	-->
-
 </html>
