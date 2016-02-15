@@ -1,0 +1,57 @@
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+
+<template id="template">
+	<style>
+		@import url(css/materialize.min.css);
+		@import url(css/styles.css);
+	</style>
+	
+	<div class="navbar-fixed">
+		<nav class="grey darken-1 z-depth-2">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo">
+					<img src="images/Olson_Logo.png" id="navbar_logo">
+				</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse">
+					<i class="mdi-navigation-menu"></i>
+				</a>
+
+				<ul class="right hide-on-med-and-down">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="resume.html">Resume</a></li>
+					<li><a href="project.html">Projects</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="resume.html">Resume</a></li>
+					<li><a href="project.html">Projects</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</template>
+<script> 
+    // thatDoc refers to the "importer", which is index.html
+    var thatDoc = document;
+    // thisDoc refers to the "importee", which is blog-post.html
+    var polyfillDoc = thatDoc._currentScript;
+    var thisDoc = (thatDoc._currentScript || thatDoc.currentScript).ownerDocument;
+    var template = thisDoc.querySelector('#template');
+    var navbarPrototype = Object.create(HTMLElement.prototype);
+    navbarPrototype.createdCallback = function() {
+        var root = this.createShadowRoot();
+        var clone = thatDoc.importNode(template.content, true);
+        root.appendChild(clone);
+    };
+    var XNavbar = thatDoc.registerElement('x-navbar', {
+        prototype: navbarPrototype
+    });
+</script>

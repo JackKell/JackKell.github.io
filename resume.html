@@ -3,7 +3,7 @@
 <!-- Set the text language -->
 <html lang="en">
 	<head>
-		<title>Jackkell's Thing</title>
+		<title>Brandon's Website</title>
 		<!-- Define the character set for the browser-->
 		<meta charset="UTF-8"/>
 		<!-- Set the starting width and scale -->
@@ -15,19 +15,18 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 
 		<!-- Include the javascript files -->
+		<script type="text/javascript" src="js/webcomponentsjs/webcomponents.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
 		<script type="text/javascript" src="js/source.js"></script>
 		<script type="text/javascript" src="js/util.js"></script>
 
         <!-- Brings in the nav bar html-->
-		<link rel="import" href="navbar.html">
+		<link rel="import" href="x-navbar.html">
 	</head>
 
 	<body id="body">
-		<script  id="navbar-script">
-			load("navbar-script", "navbar.html")
-		</script>
+		<x-navbar></x-navbar>
 
         <div class="intro grey lighten-2 z-depth-3">
             <h1 class="center light-blue-text lighten-3">Resume</h1>
