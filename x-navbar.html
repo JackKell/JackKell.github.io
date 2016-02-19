@@ -10,35 +10,35 @@
 		<nav class="grey darken-1 z-depth-2">
 			<div class="nav-wrapper">
 				<a href="index.html" class="brand-logo">
-					<img src="images/Olson_Logo.png" id="navbar_logo">
+					<img src="../images/Olson_Logo.png" id="navbar_logo">
 				</a>
 				<a href="#" data-activates="mobile-demo" class="button-collapse">
 					<i class="mdi-navigation-menu"></i>
 				</a>
 
 				<ul class="right hide-on-med-and-down">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="resume.html">Resume</a></li>
-					<li><a href="project.html">Projects</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="../home">Home</a></li>
+					<li><a href="../about">About</a></li>
+					<li><a href="../resume">Resume</a></li>
+					<li><a href="../project">Projects</a></li>
+					<li><a href="../portfolio">Portfolio</a></li>
+					<li><a href="../contact">Contact</a></li>
 				</ul>
 
 				<ul class="side-nav" id="mobile-demo">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="resume.html">Resume</a></li>
-					<li><a href="project.html">Projects</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="../home">Home</a></li>
+					<li><a href="../about">About</a></li>
+					<li><a href="../resume">Resume</a></li>
+					<li><a href="../project">Projects</a></li>
+					<li><a href="../portfolio">Portfolio</a></li>
+					<li><a href="../contact">Contact</a></li>
 				</ul>
 			</div>
 		</nav>
 	</div>
 </template>
 <script> 
-    // thatDoc refers to the "importer", which is index.html
+	// thatDoc refers to the "importer", which is index.html
     var thatDoc = document;
 
     // thisDoc refers to the "importee", which is blog-post.html
@@ -50,14 +50,16 @@
     navbarPrototype.createdCallback = function() {
         var clone = thatDoc.importNode(template.content, true);
 
-        var fileName = document.location.href.match(/[^\/]+$/)[0]
+    	var filePath = window.location.pathname;
+		var currentDirectory = filePath.substring(filePath.indexOf('/', 1)+1, filePath.lastIndexOf('/'));
+
        	var navLists = clone.lastElementChild.getElementsByTagName('ul');
         $.each(navLists, function(index, theList) {
         	var listItems = theList.children;
         	var theCorrectListItem;
         	$.each(listItems, function(index, listItem) {
         		var value = listItem.children[0].getAttribute('href');
-        		if(value == fileName) {
+        		if(value == "../" + currentDirectory) {
         			$(listItem).addClass('active');
         		}
         	});
