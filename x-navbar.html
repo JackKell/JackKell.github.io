@@ -47,11 +47,11 @@
 
     var template = thisDoc.querySelector('#template');
     var navbarPrototype = Object.create(HTMLElement.prototype);
+
     navbarPrototype.createdCallback = function() {
         var clone = thatDoc.importNode(template.content, true);
 
     	var filePath = window.location.pathname;
-		var currentDirectory = filePath.substring(filePath.indexOf('/', 1)+1, filePath.lastIndexOf('/'));
 
        	var navLists = clone.lastElementChild.getElementsByTagName('ul');
         $.each(navLists, function(index, theList) {
@@ -59,7 +59,7 @@
         	var theCorrectListItem;
         	$.each(listItems, function(index, listItem) {
         		var value = listItem.children[0].getAttribute('href');
-        		if(value == "../" + currentDirectory) {
+        		if (filePath.indexOf(value.slice(3, value.length)) > -1) {
         			$(listItem).addClass('active');
         		}
         	});
