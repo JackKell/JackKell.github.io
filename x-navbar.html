@@ -1,5 +1,6 @@
 <template id="template">
-	<script src="/js/materialize.min.js"></script>
+	<script src="http://materializecss.com/bin/materialize.js"></script>
+	<!-- <script src="http://materializecss.com/js/init.js"></script> -->
 	<script>
 		$(document).ready(function() {
 			$(document).on('WebComponentsReady', function() {
@@ -30,7 +31,7 @@
 					<li><a href="/about">About</a></li>
 					<li><a href="/resume">Resume</a></li>
 					<li><a class="dropdown-button" href="/project" data-activates="projects-dropdown">Projects<i class="material-icons right">expand_more</i></a></li>
-					<li><a class="dropdown-button" href="/portfolio" data-activates="objectives-dropdown" data-constrainwidth="false">Portfolio<i class="material-icons right">expand_more</i></a></li>
+					<li><a class="dropdown-button" href="/portfolio" data-activates="objectives-dropdown" data-constrainwidth="false">UAT Portfolio<i class="material-icons right">expand_more</i></a></li>
 					<li><a href="/contact">Contact</a></li>
 				</ul>
 
@@ -38,17 +39,31 @@
 					<li><a href="/home">Home</a></li>
 					<li><a href="/about">About</a></li>
 					<li><a href="/resume">Resume</a></li>
-					<li><a href="/project">Projects</a></li>
 					<li class="no-padding">
 						<ul class="collapsible collapsible-accordion">
 							<li>
-								<a class="collapsible-header">Portfolio</a>
+								<a class="collapsible-header">Project</a>
 								<div class="collapsible-body">
 									<ul>
-										<li><a href="#!">First</a></li>
-										<li><a href="#!">Second</a></li>
-										<li><a href="#!">Third</a></li>
-										<li><a href="#!">Fourth</a></li>
+										<li><a href="/project/#desktop-projects"> Desktop Apps</a></li>
+										<li><a href="/project/#mobile-projects">Mobile Apps </a></li>
+										<li><a href="/project/#game-projects">Game Projects</a></li>
+										<li><a href="/project/#database-projects">Database Projects</a></li>
+										<li><a href="/project/#web-projects">Web Projects</a></li>
+										<li><a href="/project/#hardware-projects">Hardware Projects</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a class="collapsible-header">UAT Portfolio</a>
+								<div class="collapsible-body">
+									<ul>
+										<li><a href="/portfolio/#objective-1">Objective 1</a></li>
+										<li><a href="/portfolio/#objective-2">Objective 2</a></li>
+										<li><a href="/portfolio/#objective-3">Objective 3</a></li>
+										<li><a href="/portfolio/#objective-4">Objective 4</a></li>
+										<li><a href="/portfolio/#objective-5">Objective 5</a></li>
+										<li><a href="/portfolio/#objective-6">Objective 6</a></li>
 									</ul>
 								</div>
 							</li>
@@ -58,9 +73,12 @@
 				</ul>
 
 				<ul id="projects-dropdown" class="dropdown-content" data-constrainwidth="false">
-					<li><a href="/project">Project 1</a></li>
-					<li><a href="/project">Project 2</a></li>
-					<li><a href="/project">Project 3</a></li>
+					<li><a href="/project/#desktop-projects"> Desktop Apps</a></li>
+					<li><a href="/project/#mobile-projects">Mobile Apps </a></li>
+					<li><a href="/project/#game-projects">Game Projects</a></li>
+					<li><a href="/project/#database-projects">Database Projects</a></li>
+					<li><a href="/project/#web-projects">Web Projects</a></li>
+					<li><a href="/project/#hardware-projects">Hardware Projects</a></li>
 				</ul>
 
 				<ul id="objectives-dropdown" class="dropdown-content">
