@@ -17,44 +17,44 @@
 	<div class="navbar-fixed">
 		<nav class="grey darken-1 z-depth-2">
 			<div class="nav-wrapper">
-				<a href="index.html" class="brand-logo">
-					<img src="../images/Olson_Logo.png" id="navbar_logo">
+				<a href="/home" class="brand-logo">
+					<img src="/images/Olson_Logo.png" id="navbar_logo">
 				</a>
 				<a href="#" data-activates="mobile-demo" class="button-collapse">
 					<i class="mdi-navigation-menu"></i>
 				</a>
 
 				<ul class="right hide-on-med-and-down">
-					<li><a href="../home">Home</a></li>
-					<li><a href="../about">About</a></li>
-					<li><a href="../resume">Resume</a></li>
-					<li><a class="dropdown-button" href="../project" data-activates="projects-dropdown">Projects<i class="material-icons right">expand_more</i></a></li>
-					<li><a class="dropdown-button" href="../portfolio" data-activates="objectives-dropdown" data-constrainwidth="false">Portfolio<i class="material-icons right">expand_more</i></a></li>
-					<li><a href="../contact">Contact</a></li>
+					<li><a href="/home">Home</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/resume">Resume</a></li>
+					<li><a class="dropdown-button" href="/project" data-activates="projects-dropdown">Projects<i class="material-icons right">expand_more</i></a></li>
+					<li><a class="dropdown-button" href="/portfolio" data-activates="objectives-dropdown" data-constrainwidth="false">Portfolio<i class="material-icons right">expand_more</i></a></li>
+					<li><a href="/contact">Contact</a></li>
 				</ul>
 
 				<ul class="side-nav" id="mobile-demo">
-					<li><a href="../home">Home</a></li>
-					<li><a href="../about">About</a></li>
-					<li><a href="../resume">Resume</a></li>
-					<li><a href="../project">Projects</a></li>
-					<li><a href="../portfolio">Portfolio</a></li>
-					<li><a href="../contact">Contact</a></li>
+					<li><a href="/home">Home</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/resume">Resume</a></li>
+					<li><a href="/project">Projects</a></li>
+					<li><a href="/portfolio">Portfolio</a></li>
+					<li><a href="/contact">Contact</a></li>
 				</ul>
 
 				<ul id="projects-dropdown" class="dropdown-content" data-constrainwidth="false">
-					<li><a href="../project">Project 1</a></li>
-					<li><a href="../project">Project 2</a></li>
-					<li><a href="../project">Project 3</a></li>
+					<li><a href="/project">Project 1</a></li>
+					<li><a href="/project">Project 2</a></li>
+					<li><a href="/project">Project 3</a></li>
 				</ul>
 
 				<ul id="objectives-dropdown" class="dropdown-content">
-					<li><a href="../portfolio/#objective-1">Objective 1</a></li>
-					<li><a href="../portfolio/#objective-2">Objective 2</a></li>
-					<li><a href="../portfolio/#objective-3">Objective 3</a></li>
-					<li><a href="../portfolio/#objective-4">Objective 4</a></li>
-					<li><a href="../portfolio/#objective-5">Objective 5</a></li>
-					<li><a href="../portfolio/#objective-6">Objective 6</a></li>
+					<li><a href="/portfolio/#objective-1">Objective 1</a></li>
+					<li><a href="/portfolio/#objective-2">Objective 2</a></li>
+					<li><a href="/portfolio/#objective-3">Objective 3</a></li>
+					<li><a href="/portfolio/#objective-4">Objective 4</a></li>
+					<li><a href="/portfolio/#objective-5">Objective 5</a></li>
+					<li><a href="/portfolio/#objective-6">Objective 6</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -82,8 +82,10 @@
         	var theCorrectListItem;
         	$.each(listItems, function(index, listItem) {
         		var value = listItem.children[0].getAttribute('href');
-        		if (filePath.indexOf(value.slice(3, value.length)) > -1) {
-        			$(listItem).addClass('active');
+        		if (value != null) {
+	        		if (filePath.indexOf(value.slice(1, value.length)) > -1) {
+	        			$(listItem).addClass('active');
+	        		}
         		}
         	});
         });

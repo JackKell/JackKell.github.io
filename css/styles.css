@@ -7,30 +7,34 @@
 	max-height: 2em;
 }
 
-body, html
-{
+body, html {
 	background-color: #EDEDED !important;
 }
 
-.intro
-{
+.intro {
 	text-align: center;
-	padding-top: 13%;
-	padding-bottom: 13%;
+	padding-top: 5%;
+	padding-bottom: 5%;
 	margin-bottom: 50px;
 }
 
-.intro h1
-{
+.intro h1 {
 	font-weight: 900;
 	text-transform: uppercase;
 }
 
-.intro h5
-{
+.intro h5 {
 	text-transform: uppercase;
 	padding: 10px;
 	color: #333333;
 	display: inline-block;
 	font-size: 1.2rem;
+}
+
+.jumpPoint {
+	display: block; 
+	content: " "; 
+	margin-top: -4.5em; 
+	height: 4.5em; 
+	visibility: hidden; 
 }
